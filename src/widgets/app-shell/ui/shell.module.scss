@@ -1,0 +1,167 @@
+.shell {
+  display: flex;
+  min-height: 100dvh;
+}
+.main {
+  margin-left: 232px;
+  width: calc(100% - 232px);
+  min-width: 0;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  height: 82px;
+  flex-shrink: 0;
+  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e6ed;
+  gap: 20px;
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  color: #747480;
+  strong {
+    font-weight: 500;
+    color: #555662;
+  }
+}
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.today {
+  font-size: 10px;
+  color: #747480;
+}
+.content {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  padding: 34px 36px 0;
+  max-width: 1590px;
+  margin: 0 auto;
+  outline: none;
+}
+.pending {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--canvas);
+  > div {
+    position: sticky;
+    top: 24px;
+    animation: none;
+  }
+}
+:global(body:has([data-navigation-pending])) .pending {
+  display: block;
+  animation: scrim-enter 160ms ease-out 140ms backwards;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  color: #747480;
+  font-size: 10px;
+  gap: 16px;
+  width: 100%;
+  max-width: 1590px;
+  margin: 0 auto;
+  padding: 28px 36px 18px;
+}
+.mobileMenu,
+.scrim {
+  display: none;
+}
+.skipLink {
+  position: fixed;
+  z-index: 50;
+  top: 12px;
+  left: 250px;
+  padding: 12px 18px;
+  background: var(--ink);
+  color: white;
+  border-radius: 10px;
+  transform: translateY(-200%);
+  &:focus {
+    transform: translateY(0);
+  }
+}
+@media (min-width: 1600px) {
+  .main {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+}
+@media (max-width: 1100px) {
+  .main {
+    margin-left: 204px;
+    width: calc(100% - 204px);
+  }
+  .content {
+    padding: 26px 24px 0;
+  }
+  .footer {
+    padding: 28px 24px 18px;
+  }
+  .topbar {
+    padding: 0 24px;
+  }
+}
+@media (max-width: 760px) {
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+  .scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: #0005;
+    z-index: 29;
+    border: 0;
+    animation: scrim-enter 160ms ease-out;
+  }
+  .topbar {
+    height: 68px;
+    padding: 0 20px;
+  }
+  .breadcrumb > span,
+  .today {
+    display: none;
+  }
+  .mobileMenu {
+    display: flex;
+    border: 0;
+    background: none;
+    padding: 5px;
+  }
+  .topActions {
+    gap: 10px;
+  }
+  .content {
+    padding: 24px 16px 0;
+  }
+  .footer {
+    padding: 28px 16px 24px;
+    flex-wrap: wrap;
+  }
+  .skipLink {
+    left: 16px;
+  }
+}
+@keyframes scrim-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

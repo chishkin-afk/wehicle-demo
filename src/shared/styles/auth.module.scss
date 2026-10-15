@@ -1,0 +1,167 @@
+.page {
+  max-width: 1180px;
+  margin: auto;
+  padding: 35px 32px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  font-size: 30px;
+  letter-spacing: -1.8px;
+  font-weight: 700;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 36px;
+  margin: auto 0;
+  padding: 50px 0;
+  align-items: stretch;
+}
+.intro {
+  background: #17171a;
+  color: white;
+  padding: 40px;
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+  min-height: 540px;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: -1.7px;
+    font-weight: 500;
+    margin-top: 25px;
+  }
+  p {
+    font-size: 12px;
+    color: #b5b5c0;
+    margin-top: 20px;
+    line-height: 1.9;
+  }
+}
+.introIcon {
+  color: #d8d8e0;
+}
+.photo {
+  position: relative;
+  flex: 1;
+  min-height: 220px;
+  margin: 25px -40px -15px;
+  img {
+    object-fit: cover;
+    object-position: 65% 65%;
+    filter: brightness(0.65);
+  }
+}
+.introFoot {
+  font-size: 10px;
+  color: #c5c5cc;
+  margin-top: 20px;
+  z-index: 1;
+}
+.formCard {
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+}
+.subtitle {
+  font-size: 12px;
+  color: #747480;
+  margin: 12px 0 28px;
+  line-height: 1.8;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 25px;
+}
+.textButton {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: #747480;
+  font-size: 10px;
+  text-align: left;
+  margin-top: 15px;
+}
+.form .textButton {
+  margin: 0;
+}
+.demo {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  margin-top: 28px;
+  color: #747480;
+  p {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+}
+.error {
+  font-size: 11px;
+  color: #a94e4e;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #747480;
+}
+.inviteCard {
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+}
+.inviteInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  background: #f6f6fa;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  strong {
+    font-size: 12px;
+    display: block;
+  }
+  small {
+    font-size: 10px;
+    color: #747480;
+    display: block;
+    margin-top: 6px;
+  }
+}
+@media (max-width: 760px) {
+  .page {
+    padding: 25px 20px;
+  }
+  .layout {
+    grid-template-columns: 1fr;
+    padding: 35px 0;
+  }
+  .intro {
+    display: none;
+  }
+  .formCard {
+    padding: 30px;
+    min-height: 430px;
+  }
+  .inviteCard {
+    margin: 40px auto;
+  }
+  .footer {
+    margin-top: auto;
+  }
+}

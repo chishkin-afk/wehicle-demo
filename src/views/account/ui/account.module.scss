@@ -1,0 +1,175 @@
+.main {
+  max-width: 1160px;
+  margin: 35px auto 0;
+  padding: 0 32px;
+}
+.tabs {
+  margin: 28px 0;
+}
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 26px;
+}
+.nextVisit {
+  padding: 32px;
+  > div:first-child {
+    font-size: 10px;
+    color: #c3c3ce;
+  }
+  h2 {
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    margin-top: 27px;
+    span {
+      font-size: 18px;
+      letter-spacing: -0.3px;
+      display: block;
+      margin-top: 5px;
+      color: #b4b4c0;
+    }
+  }
+  > p {
+    font-size: 15px;
+    margin-top: 25px;
+  }
+}
+.visitMeta {
+  display: flex;
+  gap: 25px;
+  margin-top: 15px;
+  color: #b5b5c1;
+  span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 10px;
+  }
+}
+.nextActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ffffff20;
+  margin-top: 30px;
+  padding-top: 22px;
+  > span {
+    font-size: 22px;
+    letter-spacing: -0.5px;
+  }
+}
+.historyRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 0;
+  border: 0;
+  background: none;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  > button {
+    border: 0;
+    padding: 0;
+    background: none;
+    text-align: left;
+    flex: 1;
+  }
+  strong {
+    font-size: 12px;
+    display: block;
+    font-weight: 600;
+  }
+  small {
+    display: block;
+    font-size: 10px;
+    color: #747480;
+    margin-top: 6px;
+  }
+  > span:first-child {
+    flex: 1;
+  }
+}
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 17px;
+  font-size: 10px;
+  color: #747480;
+  line-height: 1.8;
+}
+.logout {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 10px;
+  color: #747480;
+  margin: 0 15px;
+}
+.vehicle {
+  padding: 28px;
+  h2 {
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: -0.7px;
+    margin: 25px 0;
+  }
+}
+.plate {
+  font-size: 11px;
+  border: 1px solid #dcdce6;
+  border-radius: 7px;
+  padding: 7px 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.vehicleStats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 25px;
+  small {
+    display: block;
+    font-size: 10px;
+    color: #747480;
+    margin-bottom: 8px;
+  }
+  strong {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+.footer {
+  font-size: 10px;
+  color: #747480;
+  margin: 35px 0;
+  padding-bottom: 25px;
+}
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .main {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  .nextVisit {
+    padding: 24px;
+  }
+  .visitMeta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .historyRow {
+    gap: 10px;
+    strong {
+      font-size: 11px;
+    }
+  }
+  .vehicleStats {
+    gap: 25px;
+  }
+}
